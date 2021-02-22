@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../Aula_04/index.css">
+    <title>Multimida - School Of Net</title>
+</head>
+<body>
+    <header class="navbar-header">
+        <h1 class="navbar-brand">Multimidia</h1>
+    </header>
+    
+    <section>
+        <h1 class="title">Play, Pause e Stop</h1>
+    </section>
+    
+    <section>
+        <div class="row text-center">
+            <video id="video" width="560" height="350" poster="../Aula_04/img/paisagem.jpg">
+                <source src="../Aula_04/media/paisagem.mp4">
+                O seu navegador não tem suporte para o vídeo
+            </video>
+        </div>
+        
+        <div class="row text-center">
+            <button onclick="play()">Play</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+        
+        <br>
+    </section>
+    
+    <script src="../Aula_04/js/video.js"></script>
+</body>
+</html>
