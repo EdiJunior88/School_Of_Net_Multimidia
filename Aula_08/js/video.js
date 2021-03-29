@@ -53,16 +53,66 @@ function full(){
 
 getVideo().onplay = function() {
   console.log("O vídeo foi iniciado com o botão play");
+  if(getVideo().currenTime === 0){
+    setStorage("video", {desc:["O vídeo foi iniciado com o botão play"], time:[0], volume:[getVideo().volume]});
+  }
+  else {
+    var objVideo = getStorage("video");
+    objVideo.desc.push("O vídeo foi iniciado com o botão play");
+    objVideo.time.push(getVideo().currenTime);
+    objVideo.volume.push(getVideo().volume);
+    setStorage("video", objVideo);
+  }
 }
 
 getVideo().onpause = function() {
   console.log("O vídeo foi pausado com o botão pause");
+
+  var objVideo = getStorage("video");
+  objVideo.desc.push("O vídeo foi pausado com o botão pause");
+  objVideo.time.push(getVideo().currenTime);
+  objVideo.volume.push(getVideo().volume);
+  setStorage("video", objVideo);
 }
 
 getVideo().onabort = function() {
   console.log("O vídeo foi parado com o botão stop");
+
+  var objVideo = getStorage("video");
+  objVideo.desc.push("O vídeo foi parado com o botão stop");
+  objVideo.time.push(getVideo().currenTime);
+  objVideo.volume.push(getVideo().volume);
+  setStorage("video", objVideo);
+
+  var listVideo = getStorage("listVideo");
+
+  if (!listVideo.length) {
+    listVideo = [];
+  }
+  listVideo.push(objVideo);
+  setStorage("listVideo", listVideo);
 }
 
 getVideo().onvolumechange = function() {
   console.log("O vídeo está mudando de volume com o botão deslizante");
+
+  var objVideo = getStorage("video");
+  objVideo.desc.push("O vídeo está mudando de volume com o botão deslizante");
+  objVideo.time.push(getVideo().currenTime);
+  objVideo.volume.push(getVideo().volume);
+  setStorage("video", objVideo);
+}
+
+function setStorage(id, list) {
+  localStorage.setItem(id, JSON.stringify(list));
+}
+
+function getStorage(id) {
+  var storage = localStorage.getItem(id);
+  if (storage){
+    return JSON.parse(storage);
+  }
+  else {
+    return{};
+  }
 }
