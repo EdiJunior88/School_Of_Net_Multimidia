@@ -50,3 +50,19 @@ function full(){
     var video = getVideo();
     video.webkitEnterFullScreen();
 }
+
+getVideo().onplay = function() {
+  console.log("O vídeo foi iniciado com o botão play");
+}
+
+getVideo().onpause = function() {
+  console.log("O vídeo foi pausado com o botão pause");
+}
+
+getVideo().onabort = function() {
+  console.log("O vídeo foi parado com o botão stop");
+}
+
+getVideo().onvolumechange = function() {
+  console.log("O vídeo está mudando de volume com o botão deslizante");
+}
