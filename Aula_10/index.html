@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>Multimida - School Of Net</title>
+</head>
+<body>
+  <header class="navbar-header">
+      <h1 class="navbar-brand">Formatando os dados</h1>
+  </header>
+  <section>
+      <h1 class="title">Events</h1>
+  </section>
+  <section>
+      <div class="row text-center">
+          <video id="video" width="560" height="350" poster="img/paisagem.jpg">
+              <source src="media/paisagem.mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+      <div class="row text-center">
+          <button onclick="play();">Play</button>
+          <button onclick="pause();">Pause</button>
+          <button onclick="stop();">Stop</button>
+          <input type="range" id="volume" min="0" max="100" value="100" onchange="volume();">
+          <button onclick="muted();" id="muted">Muted</button>
+          <button onclick="full();">Full Screen</button>
+      </div>
+      <div class="row">
+          <table id="tableList" class="table">
+  
+          </table>
+      </div>
+      <br>
+  </section>
+  
+  <script src="js/video.js"></script>
+</body>
+</html>
