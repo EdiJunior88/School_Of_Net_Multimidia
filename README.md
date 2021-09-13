@@ -7,4 +7,4 @@ Aprenda a trabalhar com vídeos e audios em sistemas web
 <hr/>
 
 <h4><b>Aulas:</b> :vhs: 17 Video-aulas</h4>
-<h4><b>Status do Curso:</b> :speech_balloon: Estudando</h4>
+<h4><b>Status do Curso:</b> :white_check_mark: Completado</h4>
