@@ -6,7 +6,7 @@ Aprenda a trabalhar com vídeos e audios em sistemas web
 
 <hr/>
 
-< href=""><strong>Página do Projeto</strong>: <a href=' https://edijunior88.github.io/School_Of_Net_Multimidia/'>https://edijunior88.github.io/School_Of_Net_Multimidia/</a>
+<strong>Página do Projeto</strong>: <a href="https://edijunior88.github.io/School_Of_Net_Multimidia/">https://edijunior88.github.io/School_Of_Net_Multimidia/</a>
 
 <hr/>
 
